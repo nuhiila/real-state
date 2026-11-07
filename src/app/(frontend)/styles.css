@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+}
+
+@layer base {
+  * {
+    border-color: rgb(20 33 61 / 0.16);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-inter), sans-serif;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    outline-color: #c8553d;
+    outline-offset: 3px;
+  }
+  label {
+    display: block;
+    color: #14213d;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .form-input {
+    margin-top: 0.5rem;
+    width: 100%;
+    border: 1px solid rgb(20 33 61 / 0.22);
+    background: #fff;
+    padding: 0.85rem 0.9rem;
+    color: #14213d;
+    font-weight: 400;
+  }
+}
+
+::selection {
+  background: #e9dcc3;
+  color: #14213d;
+}
+
+.figma-custom-code-fragment {
+  display: contents;
+}
+
+.figma-bypass-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2147483647;
+  transform: translateY(-150%);
+  border-radius: 0;
+  background: #111827;
+  color: #fff;
+  padding: 8px 12px;
+  font:
+    600 14px/1.2 system-ui,
+    sans-serif;
+  text-decoration: none;
+}
+
+.figma-bypass-link:focus {
+  transform: translateY(0);
+}
